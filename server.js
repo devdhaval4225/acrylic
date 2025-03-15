@@ -14,6 +14,10 @@ app.use(cors());
 
 const userRoutes = require("./routes/users.routes")
 
+app.get('/', (req,res) => {
+    res.json({status:200,message: "Serveris running"});
+})
+
 app.use("/api/user",userRoutes);
 
 
